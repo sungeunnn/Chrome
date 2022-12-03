@@ -7,8 +7,8 @@ function onGeoOk(position){
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        const weather = document.querySelector("#weather div:first-child")
-        const city = document.querySelector("#weather div:last-child")
+        const weather = document.querySelector("#weather div:last-child")
+        const city = document.querySelector("#weather div:first-child")
         city.innerText = data.name;
         weather.innerText =`${data.weather[0].main} / ${data.main.temp} 도`;
     }); //자바스크립트가 url을 실행시키는 것
